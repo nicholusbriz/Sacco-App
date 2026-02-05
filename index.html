@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atbriz Community SACCO - Uganda SACCO Portal</title>
+  <link rel="stylesheet" href="/src/css/base.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar container">
+      <div class="logo">
+        <img src="/images/atbriz_sacco_logo.webp" alt="SACCO Logo" onerror="this.style.display='none'">
+        <span>Atbriz Community SACCO</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Welcome to Atbriz Community SACCO</h1>
+            <p>Your trusted financial partner for savings, loans, and investment opportunities in Uganda.</p>
+          </div>
+          <div class="hero-image">
+            <img src="/images/atbriz_hero_image1.webp" alt="SACCO Banking" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Section -->
+    <section class="login-section">
+      <div class="container">
+        <div class="login-container">
+          <div class="login-header">
+            <h2>Member Login</h2>
+            <p>Access your SACCO account</p>
+          </div>
+
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="memberId">Member ID:</label>
+              <input type="text" id="memberId" name="memberId" placeholder="Enter your Member ID" required>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <button type="submit" class="btn">LOGIN</button>
+          </form>
+
+          <div class="login-footer">
+            <a href="#forgot-password">Forgot Password?</a>
+            <a href="#register">Register</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="services">
+      <div class="container">
+        <h2 class="text-center">Our Services</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Savings Accounts</h3>
+            <p>Secure and flexible savings options with competitive interest rates.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏦</div>
+            <h3>Loans</h3>
+            <p>Affordable loan facilities for personal and business needs.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💱</div>
+            <h3>Currency Exchange</h3>
+            <p>Real-time currency exchange services at competitive rates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Atbriz Community SACCO. All rights reserved.</p>
+      <p>Empowering communities through financial inclusion</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
