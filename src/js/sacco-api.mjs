@@ -344,7 +344,15 @@ class SACCOAPI {
   static async getFinancialNews() {
     try {
       const response = await fetch(`https://newsapi.org/v2/top-headlines?category=business&country=us&apiKey=${import.meta.env.VITE_NEWS_API_KEY}`);
+      if (!response.ok) {
+        console.error('News API error:', response.status, response.statusText);
+        return [];
+      }
       const data = await response.json();
+      if (!data.articles) {
+        console.error('No articles in response:', data);
+        return [];
+      }
       return data.articles.slice(0, 5); // Top 5 articles
     } catch (err) {
       console.error('News fetch failed:', err);
