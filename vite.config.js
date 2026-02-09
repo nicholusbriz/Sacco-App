@@ -6,16 +6,20 @@ export default defineConfig({
     port: 3000,
     open: true
   },
-  
+
   // Build configuration
   build: {
     outDir: 'dist',
+    emptyOutDir: true,
     sourcemap: true
   },
-  
-  // Public directory configuration
-  publicDir: 'src/public',
-  
+
+  // Root directory (where your index.html is)
+  root: 'src/public',
+
+  // Base path for deployment
+  base: '/',
+
   // Resolve configuration
   resolve: {
     alias: {
