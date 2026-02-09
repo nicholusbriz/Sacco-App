@@ -264,42 +264,42 @@ function validateSingleField(fieldId) {
   let errorMessage = '';
 
   switch (fieldId) {
-    case 'name':
-      if (!formData.name || formData.name.trim().length < 2) {
-        errorMessage = 'Full name must be at least 2 characters';
-        isValid = false;
-      }
-      break;
-    case 'email':
-      if (!SACCOAPI.validateEmail(formData.email)) {
-        errorMessage = 'Please enter a valid email address';
-        isValid = false;
-      }
-      break;
-    case 'memberId':
-      if (!formData.memberId || formData.memberId.length < 3) {
-        errorMessage = 'Member ID must be at least 3 characters';
-        isValid = false;
-      }
-      break;
-    case 'password':
-      if (!formData.password || formData.password.length < 6) {
-        errorMessage = 'Password must be at least 6 characters';
-        isValid = false;
-      }
-      break;
-    case 'balance':
-      if (!formData.balance || formData.balance < 10000) {
-        errorMessage = 'Minimum deposit is 10,000 UGX';
-        isValid = false;
-      }
-      break;
-    case 'currency':
-      if (!formData.currency) {
-        errorMessage = 'Please select a currency';
-        isValid = false;
-      }
-      break;
+  case 'name':
+    if (!formData.name || formData.name.trim().length < 2) {
+      errorMessage = 'Full name must be at least 2 characters';
+      isValid = false;
+    }
+    break;
+  case 'email':
+    if (!SACCOAPI.validateEmail(formData.email)) {
+      errorMessage = 'Please enter a valid email address';
+      isValid = false;
+    }
+    break;
+  case 'memberId':
+    if (!formData.memberId || formData.memberId.length < 3) {
+      errorMessage = 'Member ID must be at least 3 characters';
+      isValid = false;
+    }
+    break;
+  case 'password':
+    if (!formData.password || formData.password.length < 6) {
+      errorMessage = 'Password must be at least 6 characters';
+      isValid = false;
+    }
+    break;
+  case 'balance':
+    if (!formData.balance || formData.balance < 10000) {
+      errorMessage = 'Minimum deposit is 10,000 UGX';
+      isValid = false;
+    }
+    break;
+  case 'currency':
+    if (!formData.currency) {
+      errorMessage = 'Please select a currency';
+      isValid = false;
+    }
+    break;
   }
 
   if (!isValid) {

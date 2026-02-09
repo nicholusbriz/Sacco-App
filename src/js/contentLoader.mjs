@@ -23,22 +23,22 @@ export async function loadContent(page) {
 
       // Initialize page-specific functionality
       switch (page) {
-        case 'login':
-          initLoginForm();
-          break;
-        case 'member-dashboard':
-          initDashboard();
-          break;
-        case 'register':
-          initRegisterForm();
-          break;
-        case 'home':
-          // Home page doesn't need special initialization
-          break;
+      case 'login':
+        initLoginForm();
+        break;
+      case 'member-dashboard':
+        initDashboard();
+        break;
+      case 'register':
+        initRegisterForm();
+        break;
+      case 'home':
+        // Home page doesn't need special initialization
+        break;
         // Add more pages as needed
-        default:
-          // Add more pages as needed
-          break;
+      default:
+        // Add more pages as needed
+        break;
       }
     } else {
       console.error('Content container not found!');
