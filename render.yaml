@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: atbriz-sacco
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
+    rootDirectory: src/public
+    envVars:
+      - key: VITE_EXCHANGE_API_URL
+        value: https://v6.exchangerate-api.com/v6
+      - key: VITE_EXCHANGE_API_KEY
+        value: 4f4eaecf6de27b7d26170525
