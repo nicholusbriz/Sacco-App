@@ -67,20 +67,8 @@ export async function getUSDToUGXRate() {
       base: 'USD',
       target: 'UGX'
     };
-  } catch (error) {
-    console.log('Primary API failed, trying backup...');
-    try {
-      const backupData = await getBackupExchangeRates('USD', 'UGX');
-      return {
-        rate: backupData.rates.UGX,
-        source: 'Frankfurter API',
-        date: backupData.date,
-        base: 'USD',
-        target: 'UGX'
-      };
-    } catch (backupError) {
-      console.error('Both APIs failed');
-      throw new Error('Unable to fetch exchange rates from any source');
-    }
+  } catch {
+    console.error('Unable to fetch exchange rates from primary API');
+    throw new Error('Unable to fetch exchange rates from primary API');
   }
 }

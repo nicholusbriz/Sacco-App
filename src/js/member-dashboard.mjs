@@ -34,33 +34,23 @@ function setupDashboardEventListeners() {
 
   // Add event listeners
   if (depositBtn) {
-    depositBtn.addEventListener('click', () => {
-      alert('Deposit feature coming soon!');
-    });
+    depositBtn.addEventListener('click', () => { });
   }
 
   if (withdrawalBtn) {
-    withdrawalBtn.addEventListener('click', () => {
-      alert('Withdrawal feature coming soon!');
-    });
+    withdrawalBtn.addEventListener('click', () => { });
   }
 
   if (transferBtn) {
-    transferBtn.addEventListener('click', () => {
-      alert('Transfer feature coming soon!');
-    });
+    transferBtn.addEventListener('click', () => { });
   }
 
   if (loanBtn) {
-    loanBtn.addEventListener('click', () => {
-      alert('Loan feature coming soon!');
-    });
+    loanBtn.addEventListener('click', () => { });
   }
 
   if (billBtn) {
-    billBtn.addEventListener('click', () => {
-      alert('Bill payment feature coming soon!');
-    });
+    billBtn.addEventListener('click', () => { });
   }
 
   if (logoutBtn) {
@@ -77,12 +67,13 @@ async function updateDashboardUI(user) {
     }
 
     // Get real data from SACCOAPI
-    const [transactions, loans, notifications, branches, exchangeRates] = await Promise.all([
+    const [transactions, loans, notifications, branches, exchangeRates, news] = await Promise.all([
       SACCOAPI.getMemberTransactions(user.memberId),
       SACCOAPI.getMemberLoans(user.memberId),
       SACCOAPI.getMemberNotifications(user.memberId),
       SACCOAPI.getBranches(),
-      SACCOAPI.getExchangeRates()
+      SACCOAPI.getExchangeRates(),
+      SACCOAPI.getFinancialNews()
     ]);
 
     // Update Account Summary
@@ -99,6 +90,9 @@ async function updateDashboardUI(user) {
 
     // Update Branch Locations
     updateBranchLocations(branches);
+
+    // Update Financial News
+    updateFinancialNews(news);
 
   } catch (err) {
     console.error('Error updating dashboard:', err);
@@ -251,6 +245,24 @@ function updateBranchLocations(branches) {
   });
 
   branchesList.innerHTML = html;
+}
+
+// Update Financial News Card
+function updateFinancialNews(news) {
+  const newsList = document.getElementById('newsList');
+  if (!newsList) return;
+
+  let html = '';
+  news.forEach(article => {
+    html += `
+      <div class="news-item">
+        <div class="news-title">${article.title}</div>
+        <div class="news-source">${article.source.name} - ${formatDate(article.publishedAt)}</div>
+      </div>
+    `;
+  });
+
+  newsList.innerHTML = html;
 }
 
 // Global logout function

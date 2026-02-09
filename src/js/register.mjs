@@ -7,7 +7,7 @@ export function initRegisterForm() {
   const registerForm = document.getElementById('registerForm');
   const passwordToggle = document.getElementById('passwordToggle');
   const passwordInput = document.getElementById('password');
-  const registerBtn = document.getElementById('registerBtn');
+  const toggleIcon = document.querySelector('.toggle-icon');
 
   // Password toggle functionality
   if (passwordToggle && passwordInput) {
@@ -34,10 +34,6 @@ export function initRegisterForm() {
 async function handleRegisterSubmit(e) {
   e.preventDefault();
 
-  const registerBtn = document.getElementById('registerBtn');
-  const loadingSpinner = document.getElementById('loadingSpinner');
-  const successMessage = document.getElementById('successMessage');
-  const errorMessage = document.getElementById('errorMessage');
   const registerForm = document.getElementById('registerForm');
 
   // Validate form
@@ -112,26 +108,11 @@ function createMemberObject(formData) {
     memberId: formData.memberId,
     name: formData.name,
     email: formData.email,
-    password: formData.password, // No hashing as requested
+    password: formData.password, // Password stored as plain text for demo purposes
     balance: formData.balance,
     currency: formData.currency,
     createdAt: currentDate
   };
-}
-
-// Generate account number
-function generateAccountNumber() {
-  const timestamp = Date.now();
-  const random = Math.floor(Math.random() * 1000);
-  return `SACCO${timestamp}${random}`;
-}
-
-// Get membership level based on deposit
-function getMembershipLevel(deposit) {
-  if (deposit >= 1000000) return 'platinum';
-  if (deposit >= 500000) return 'gold';
-  if (deposit >= 100000) return 'silver';
-  return 'bronze';
 }
 
 // Save to LocalStorage
@@ -148,8 +129,6 @@ async function saveToLocalStorage(member) {
 
     // Also save current registration for immediate use
     localStorage.setItem('currentRegistration', JSON.stringify(member));
-
-    console.log('Member saved to LocalStorage:', member);
   } catch (error) {
     console.error('Error saving to LocalStorage:', error);
     throw error;
@@ -165,8 +144,6 @@ async function saveToMembersJson(member) {
     const serverMembers = JSON.parse(localStorage.getItem('serverMembers') || '[]');
     serverMembers.push(member);
     localStorage.setItem('serverMembers', JSON.stringify(serverMembers));
-
-    console.log('Member saved to simulated server:', member);
   } catch (error) {
     console.error('Error saving to members.json:', error);
     throw error;
@@ -247,59 +224,6 @@ function clearValidationErrors() {
       errorText.remove();
     }
   });
-}
-
-// Check password strength
-function checkPasswordStrength(password) {
-  const strengthBar = document.querySelector('.password-strength-bar');
-  const strengthText = document.querySelector('.password-strength-text');
-
-  if (!strengthBar || !strengthText) return;
-
-  let strength = 0;
-
-  if (password.length >= 8) strength++;
-  if (password.match(/[a-z]/) && password.match(/[A-Z]/)) strength++;
-  if (password.match(/[0-9]/)) strength++;
-  if (password.match(/[^a-zA-Z0-9]/)) strength++;
-
-  // Remove all strength classes
-  strengthBar.className = 'password-strength-bar';
-
-  if (password.length === 0) {
-    strengthBar.style.width = '0%';
-    strengthText.textContent = '';
-  } else if (strength <= 1) {
-    strengthBar.classList.add('password-strength-weak');
-    strengthText.textContent = 'Weak password';
-    strengthText.style.color = '#e74c3c';
-  } else if (strength === 2) {
-    strengthBar.classList.add('password-strength-medium');
-    strengthText.textContent = 'Medium password';
-    strengthText.style.color = '#f39c12';
-  } else {
-    strengthBar.classList.add('password-strength-strong');
-    strengthText.textContent = 'Strong password';
-    strengthText.style.color = '#27ae60';
-  }
-}
-
-// Validate password match
-function validatePasswordMatch() {
-  const password = document.getElementById('password').value;
-  const confirmPassword = document.getElementById('confirmPassword').value;
-  const confirmGroup = document.getElementById('confirmPassword').closest('.form-group');
-
-  if (confirmPassword && password !== confirmPassword) {
-    confirmGroup.classList.add('error');
-    showFieldError('confirmPassword', 'Passwords do not match');
-  } else {
-    confirmGroup.classList.remove('error');
-    const errorText = confirmGroup.querySelector('.error-text');
-    if (errorText) {
-      errorText.remove();
-    }
-  }
 }
 
 // Add real-time validation
@@ -392,44 +316,48 @@ function validateSingleField(fieldId) {
 
 // Show loading state
 function showLoadingState() {
-  const registerForm = document.getElementById('registerForm');
-  const loadingSpinner = document.getElementById('loadingSpinner');
+  setDisplays({
+    'registerForm': 'none',
+    'loadingSpinner': 'block'
+  });
   const registerBtn = document.getElementById('registerBtn');
-
-  if (registerForm) registerForm.style.display = 'none';
-  if (loadingSpinner) loadingSpinner.style.display = 'block';
   if (registerBtn) registerBtn.disabled = true;
 }
 
 // Hide loading state
 function hideLoadingState() {
-  const registerForm = document.getElementById('registerForm');
-  const loadingSpinner = document.getElementById('loadingSpinner');
+  setDisplays({
+    'registerForm': 'block',
+    'loadingSpinner': 'none'
+  });
   const registerBtn = document.getElementById('registerBtn');
-
-  if (registerForm) registerForm.style.display = 'block';
-  if (loadingSpinner) loadingSpinner.style.display = 'none';
   if (registerBtn) registerBtn.disabled = false;
 }
 
 // Show success message
 function showSuccessMessage() {
-  const registerForm = document.getElementById('registerForm');
-  const successMessage = document.getElementById('successMessage');
-
-  if (registerForm) registerForm.style.display = 'none';
-  if (successMessage) successMessage.style.display = 'block';
+  setDisplays({
+    'registerForm': 'none',
+    'successMessage': 'block'
+  });
 }
 
 // Show error message
 function showErrorMessage(message) {
-  const registerForm = document.getElementById('registerForm');
-  const errorMessage = document.getElementById('errorMessage');
+  setDisplays({
+    'registerForm': 'none',
+    'errorMessage': 'block'
+  });
   const errorText = document.getElementById('errorText');
-
-  if (registerForm) registerForm.style.display = 'none';
-  if (errorMessage) errorMessage.style.display = 'block';
   if (errorText) errorText.textContent = message;
+}
+
+// Generic function to set display for multiple elements
+function setDisplays(displayMap) {
+  for (const [id, display] of Object.entries(displayMap)) {
+    const element = document.getElementById(id);
+    if (element) element.style.display = display;
+  }
 }
 
 // Get registered members from LocalStorage
@@ -470,8 +398,6 @@ export async function syncWithMembersJson() {
 
     // Save merged array back to LocalStorage (simulating server update)
     localStorage.setItem('registeredMembers', JSON.stringify(mergedMembers));
-
-    console.log('Synced members:', mergedMembers);
     return mergedMembers;
   } catch (error) {
     console.error('Error syncing with members.json:', error);

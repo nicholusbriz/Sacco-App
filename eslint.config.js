@@ -7,6 +7,13 @@ export default [
       ecmaVersion: 2022,
       sourceType: 'module',
       globals: {
+        window: 'readonly',
+        document: 'readonly',
+        localStorage: 'readonly',
+        fetch: 'readonly',
+        setTimeout: 'readonly',
+        alert: 'readonly',
+        FormData: 'readonly',
         console: 'readonly',
         process: 'readonly'
       }

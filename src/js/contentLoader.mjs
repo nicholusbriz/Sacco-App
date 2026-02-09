@@ -37,7 +37,7 @@ export async function loadContent(page) {
           break;
         // Add more pages as needed
         default:
-          console.log(`No initializer for page: ${page}`);
+          // Add more pages as needed
           break;
       }
     } else {

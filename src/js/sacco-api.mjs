@@ -340,9 +340,16 @@ class SACCOAPI {
     });
   }
 
-  // Generate unique ID
-  static generateId(prefix = 'ID') {
-    return `${prefix}${Date.now()}`;
+  // Get financial news
+  static async getFinancialNews() {
+    try {
+      const response = await fetch(`https://newsapi.org/v2/top-headlines?category=business&country=us&apiKey=${import.meta.env.VITE_NEWS_API_KEY}`);
+      const data = await response.json();
+      return data.articles.slice(0, 5); // Top 5 articles
+    } catch (err) {
+      console.error('News fetch failed:', err);
+      return [];
+    }
   }
 
   // Validate email format

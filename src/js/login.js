@@ -2,7 +2,7 @@
 import SACCOAPI from './sacco-api.mjs';
 import { handleRouting } from './router.mjs';
 import { loadContent } from './contentLoader.mjs';
-import { logout, updateHeaderAuth } from './utility.mjs';
+import { updateHeaderAuth } from './utility.mjs';
 
 export function initLoginForm() {
   const loginForm = document.getElementById('loginForm');
@@ -45,8 +45,6 @@ async function handleLoginSubmit(e) {
         // Store user session in LocalStorage
         localStorage.setItem('currentUser', JSON.stringify(result.user));
         localStorage.setItem('loginTime', new Date().toISOString());
-
-        console.log('Login successful:', result.user);
 
         // Update header to show logged-in state
         updateHeaderAuth();
