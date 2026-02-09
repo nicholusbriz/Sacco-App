@@ -343,7 +343,11 @@ class SACCOAPI {
   // Get financial news
   static async getFinancialNews() {
     try {
-      const response = await fetch(`https://newsapi.org/v2/top-headlines?category=business&country=us&apiKey=${import.meta.env.VITE_NEWS_API_KEY}`);
+      const response = await fetch(`https://newsapi.org/v2/top-headlines?category=business&country=us&apiKey=${import.meta.env.VITE_NEWS_API_KEY}`, {
+        headers: {
+          'User-Agent': 'Sacco-App/1.0'
+        }
+      });
       if (!response.ok) {
         console.error('News API error:', response.status, response.statusText);
         return [];
