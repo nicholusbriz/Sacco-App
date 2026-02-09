@@ -15,9 +15,10 @@ export default defineConfig({
   },
 
   // Root directory (where your index.html is)
-  root: 'src/public',
+  // root: 'src/public',
 
-  // Base path for deployment
+  // Public directory for static assets
+  publicDir: 'src/public',
   base: '/',
 
   // Resolve configuration
