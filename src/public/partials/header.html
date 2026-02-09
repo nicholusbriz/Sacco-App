@@ -1,0 +1,19 @@
+<!-- Header Content -->
+<nav class="navbar container">
+  <div class="logo">
+    <img src="/images/atbriz_sacco_logo.webp" alt="SACCO Logo">
+    <span>Atbriz Community SACCO</span>
+  </div>
+  <ul class="nav-links">
+    <!-- Default state (not logged in) -->
+    <li class="nav-item-logged-out" style="display: block;">
+      <a href="/login" class="btn-account">My Account</a>
+    </li>
+
+    <!-- Logged in state -->
+    <li class="nav-item-logged-in" style="display: none;">
+      <span class="welcome-message">Welcome, <span id="headerUserName">User</span></span>
+      <button class="btn-logout" onclick="handleLogout()">Logout</button>
+    </li>
+  </ul>
+</nav>

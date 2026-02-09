@@ -1,0 +1,112 @@
+{
+  "branches": [
+    {
+      "branchId": "BR001",
+      "name": "Kampala Main Branch",
+      "address": "Plot 12, Kampala Road, Kampala, Uganda",
+      "phone": "+256 414 123456",
+      "email": "kampala@sacco.com",
+      "hours": "Mon-Fri: 8AM-6PM, Sat: 9AM-2PM",
+      "coordinates": { "lat": 0.3476, "lng": 32.5825 }
+    },
+    {
+      "branchId": "BR002",
+      "name": "Entebbe Branch",
+      "address": "Plot 5, Airport Road, Entebbe, Uganda",
+      "phone": "+256 414 789012",
+      "email": "entebbe@sacco.com",
+      "hours": "Mon-Fri: 8AM-5PM, Sat: 9AM-1PM",
+      "coordinates": { "lat": 0.0630, "lng": 32.4750 }
+    },
+    {
+      "branchId": "BR003",
+      "name": "Mbarara Branch",
+      "address": "High Street, Mbarara, Uganda",
+      "phone": "+256 414 345678",
+      "email": "mbarara@sacco.com",
+      "hours": "Mon-Fri: 8AM-5PM",
+      "coordinates": { "lat": -0.6072, "lng": 30.6545 }
+    },
+    {
+      "branchId": "BR004",
+      "name": "Gulu Branch",
+      "address": "Main Street, Gulu, Uganda",
+      "phone": "+256 414 876543",
+      "email": "gulu@sacco.com",
+      "hours": "Mon-Fri: 9AM-5PM",
+      "coordinates": { "lat": 2.7746, "lng": 32.3050 }
+    },
+    {
+      "branchId": "BR005",
+      "name": "Jinja Branch",
+      "address": "Nile Avenue, Jinja, Uganda",
+      "phone": "+256 414 223344",
+      "email": "jinja@sacco.com",
+      "hours": "Mon-Fri: 8AM-6PM",
+      "coordinates": { "lat": 0.4244, "lng": 33.2040 }
+    },
+    {
+      "branchId": "BR006",
+      "name": "Fort Portal Branch",
+      "address": "Rwenzori Street, Fort Portal, Uganda",
+      "phone": "+256 414 556677",
+      "email": "fortportal@sacco.com",
+      "hours": "Mon-Fri: 8AM-5PM",
+      "coordinates": { "lat": 0.6710, "lng": 30.2740 }
+    },
+    {
+      "branchId": "BR007",
+      "name": "Mbale Branch",
+      "address": "Republic Street, Mbale, Uganda",
+      "phone": "+256 414 998877",
+      "email": "mbale@sacco.com",
+      "hours": "Mon-Fri: 9AM-5PM",
+      "coordinates": { "lat": 1.0821, "lng": 34.1750 }
+    },
+    {
+      "branchId": "BR008",
+      "name": "Arua Branch",
+      "address": "Independence Road, Arua, Uganda",
+      "phone": "+256 414 334455",
+      "email": "arua@sacco.com",
+      "hours": "Mon-Fri: 8AM-4PM",
+      "coordinates": { "lat": 3.0301, "lng": 30.9100 }
+    },
+    {
+      "branchId": "BR009",
+      "name": "Masaka Branch",
+      "address": "Edward Avenue, Masaka, Uganda",
+      "phone": "+256 414 112233",
+      "email": "masaka@sacco.com",
+      "hours": "Mon-Fri: 8AM-5PM",
+      "coordinates": { "lat": -0.3333, "lng": 31.7333 }
+    },
+    {
+      "branchId": "BR010",
+      "name": "Soroti Branch",
+      "address": "Market Street, Soroti, Uganda",
+      "phone": "+256 414 445566",
+      "email": "soroti@sacco.com",
+      "hours": "Mon-Fri: 9AM-4PM",
+      "coordinates": { "lat": 1.7167, "lng": 33.6167 }
+    },
+    {
+      "branchId": "BR011",
+      "name": "Hoima Branch",
+      "address": "Oil Road, Hoima, Uganda",
+      "phone": "+256 414 778899",
+      "email": "hoima@sacco.com",
+      "hours": "Mon-Fri: 8AM-5PM",
+      "coordinates": { "lat": 1.4356, "lng": 31.3436 }
+    },
+    {
+      "branchId": "BR012",
+      "name": "Kabale Branch",
+      "address": "Main Street, Kabale, Uganda",
+      "phone": "+256 414 667788",
+      "email": "kabale@sacco.com",
+      "hours": "Mon-Fri: 8AM-5PM",
+      "coordinates": { "lat": -1.2490, "lng": 29.9850 }
+    }
+  ]
+}

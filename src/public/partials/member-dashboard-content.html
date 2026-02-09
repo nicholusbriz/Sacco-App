@@ -1,0 +1,125 @@
+<!-- Dashboard Content -->
+<section class="dashboard-section">
+  <div class="container">
+    <!-- Navigation Menu -->
+    <div class="dashboard-nav">
+      <a href="#dashboard" class="nav-link active">Dashboard</a>
+      <a href="#transactions" class="nav-link">Transactions</a>
+      <a href="#loans" class="nav-link">Loans</a>
+      <a href="#account" class="nav-link">Account</a>
+      <a href="#tools" class="nav-link">Tools</a>
+    </div>
+
+    <!-- Main Dashboard Grid -->
+    <div class="dashboard-grid">
+      <!-- Account Summary Card -->
+      <div class="dashboard-card account-summary">
+        <div class="card-header">
+          <h3>Account Summary</h3>
+          <span class="card-icon">💰</span>
+        </div>
+        <div class="card-content">
+          <div class="summary-item">
+            <span class="summary-label">Total Balance</span>
+            <span class="summary-value" id="totalBalance">UGX 0</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Savings</span>
+            <span class="summary-value" id="savings">UGX 0</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Loan Balance</span>
+            <span class="summary-value" id="loanBalance">UGX 0</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Credit Score</span>
+            <span class="summary-value credit-score" id="creditScore">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Transactions Card -->
+      <div class="dashboard-card hover-card">
+        <div class="card-header">
+          <h3>Recent Transactions</h3>
+          <span class="card-icon">💳</span>
+        </div>
+        <div class="card-content">
+          <div class="transaction-list" id="recentTransactions">
+            <!-- Transactions will be loaded dynamically -->
+          </div>
+          <a href="#transactions" class="view-all-link">View All</a>
+        </div>
+      </div>
+
+      <!-- Notifications Card -->
+      <div class="dashboard-card hover-card">
+        <div class="card-header">
+          <h3>Notifications</h3>
+          <span class="card-icon">🔔</span>
+        </div>
+        <div class="card-content">
+          <div class="notification-list" id="notificationsList">
+            <!-- Notifications will be loaded dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Exchange Rates Card -->
+      <div class="dashboard-card hover-card">
+        <div class="card-header">
+          <h3>Exchange Rates</h3>
+          <span class="card-icon">💱</span>
+        </div>
+        <div class="card-content">
+          <div class="exchange-list" id="exchangeRates">
+            <!-- Exchange rates will be loaded dynamically -->
+          </div>
+          <div class="update-time" id="ratesUpdateTime">
+            <!-- Update time will be loaded dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Branch Locations Card -->
+      <div class="dashboard-card hover-card">
+        <div class="card-header">
+          <h3>Branch Locations</h3>
+          <span class="card-icon">📍</span>
+        </div>
+        <div class="card-content">
+          <div class="branch-list" id="branchLocations">
+            <!-- Branch locations will be loaded dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Actions Section -->
+    <div class="quick-actions-section">
+      <h3>Quick Actions</h3>
+      <div class="quick-actions-grid">
+        <button class="quick-action-btn" id="depositBtn">
+          <span class="action-icon">�</span>
+          <span class="action-text">Deposit</span>
+        </button>
+        <button class="quick-action-btn" id="withdrawBtn">
+          <span class="action-icon">💸</span>
+          <span class="action-text">Withdraw</span>
+        </button>
+        <button class="quick-action-btn" id="transferBtn">
+          <span class="action-icon">🔄</span>
+          <span class="action-text">Transfer</span>
+        </button>
+        <button class="quick-action-btn" id="loanBtn">
+          <span class="action-icon">🏦</span>
+          <span class="action-text">Apply Loan</span>
+        </button>
+        <button class="quick-action-btn" id="billBtn">
+          <span class="action-icon">📱</span>
+          <span class="action-text">Pay Bill</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

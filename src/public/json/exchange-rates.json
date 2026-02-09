@@ -1,0 +1,88 @@
+{
+  "rates": [
+    {
+      "from": "USD",
+      "to": "UGX",
+      "rate": 3800,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "Bank of Uganda"
+    },
+    {
+      "from": "KES",
+      "to": "UGX",
+      "rate": 30,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "Central Bank of Kenya"
+    },
+    {
+      "from": "TZS",
+      "to": "UGX",
+      "rate": 1.6,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "Bank of Tanzania"
+    },
+    {
+      "from": "GBP",
+      "to": "UGX",
+      "rate": 4800,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "Bank of Uganda"
+    },
+    {
+      "from": "EUR",
+      "to": "UGX",
+      "rate": 4100,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "European Central Bank"
+    },
+    {
+      "from": "RWF",
+      "to": "UGX",
+      "rate": 3.2,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "National Bank of Rwanda"
+    },
+    {
+      "from": "ZAR",
+      "to": "UGX",
+      "rate": 210,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "South African Reserve Bank"
+    },
+    {
+      "from": "CAD",
+      "to": "UGX",
+      "rate": 2900,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "Bank of Canada"
+    },
+    {
+      "from": "AUD",
+      "to": "UGX",
+      "rate": 2600,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "Reserve Bank of Australia"
+    },
+    {
+      "from": "INR",
+      "to": "UGX",
+      "rate": 45,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "Reserve Bank of India"
+    },
+    {
+      "from": "CNY",
+      "to": "UGX",
+      "rate": 550,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "People's Bank of China"
+    },
+    {
+      "from": "JPY",
+      "to": "UGX",
+      "rate": 25,
+      "date": "2024-01-15T14:30:00Z",
+      "source": "Bank of Japan"
+    }
+  ]
+}

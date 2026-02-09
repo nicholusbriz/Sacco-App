@@ -1,0 +1,96 @@
+<div class="register-container">
+  <div class="register-card">
+    <div class="register-header">
+      <h2>Create Account</h2>
+      <p>Join SACCO today and start managing your finances</p>
+    </div>
+
+    <form id="registerForm" class="register-form">
+      <!-- Account Information -->
+      <div class="form-section">
+        <h3>Account Information</h3>
+
+        <div class="form-group">
+          <label for="memberId">Member ID *</label>
+          <input type="text" id="memberId" name="memberId" required placeholder="e.g., ACC001">
+        </div>
+
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required placeholder="e.g., John Doe">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="e.g., john.doe@sacco.com">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password *</label>
+          <input type="password" id="password" name="password" required placeholder="Enter your password">
+          <button type="button" id="passwordToggle" class="toggle-password">
+            <i class="eye-icon">👁️</i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Financial Information -->
+      <div class="form-section">
+        <h3>Financial Information</h3>
+
+        <div class="form-group">
+          <label for="balance">Initial Deposit (UGX) *</label>
+          <input type="number" id="balance" name="balance" required min="10000" step="1000" placeholder="e.g., 100000">
+        </div>
+
+        <div class="form-group">
+          <label for="currency">Preferred Currency *</label>
+          <select id="currency" name="currency" required>
+            <option value="">Select Currency</option>
+            <option value="UGX">UGX - Ugandan Shilling</option>
+            <option value="USD">USD - US Dollar</option>
+            <option value="KES">KES - Kenyan Shilling</option>
+            <option value="TZS">TZS - Tanzanian Shilling</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Terms and Submit -->
+      <div class="form-section">
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I agree to the SACCO Terms and Conditions and Privacy Policy</label>
+        </div>
+
+        <button type="submit" class="register-btn" id="registerBtn">
+          Create Account
+        </button>
+      </div>
+
+      <!-- Login Link -->
+      <div class="login-link">
+        <p>Already have an account? <a href="/login">Sign In</a></p>
+      </div>
+    </form>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+      <div class="spinner"></div>
+      <p>Creating your account...</p>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage" style="display: none;">
+      <div class="success-icon">✅</div>
+      <h3>Account Created Successfully!</h3>
+      <p>Your SACCO account has been created. Redirecting to dashboard...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div class="error-message" id="errorMessage" style="display: none;">
+      <div class="error-icon">❌</div>
+      <h3>Registration Failed</h3>
+      <p id="errorText">Please check your information and try again.</p>
+    </div>
+  </div>
+</div>

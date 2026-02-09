@@ -1,0 +1,136 @@
+{
+  "transactions": [
+    {
+      "transactionId": "TXN001",
+      "memberId": "ACC002",
+      "type": "deposit",
+      "amount": 50000,
+      "currency": "UGX",
+      "description": "Salary deposit",
+      "date": "2024-01-15T10:30:00Z",
+      "status": "completed",
+      "balanceAfter": 1250000
+    },
+    {
+      "transactionId": "TXN002",
+      "memberId": "ACC002",
+      "type": "withdrawal",
+      "amount": 20000,
+      "currency": "UGX",
+      "description": "ATM withdrawal",
+      "date": "2024-01-14T15:45:00Z",
+      "status": "completed",
+      "balanceAfter": 1200000
+    },
+    {
+      "transactionId": "TXN003",
+      "memberId": "ACC003",
+      "type": "deposit",
+      "amount": 150000,
+      "currency": "UGX",
+      "description": "Business income",
+      "date": "2024-01-13T09:20:00Z",
+      "status": "completed",
+      "balanceAfter": 2100000
+    },
+    {
+      "transactionId": "TXN004",
+      "memberId": "ACC004",
+      "type": "withdrawal",
+      "amount": 75000,
+      "currency": "UGX",
+      "description": "School fees",
+      "date": "2024-01-12T11:00:00Z",
+      "status": "completed",
+      "balanceAfter": 980000
+    },
+    {
+      "transactionId": "TXN005",
+      "memberId": "ACC005",
+      "type": "deposit",
+      "amount": 300000,
+      "currency": "UGX",
+      "description": "Loan repayment",
+      "date": "2024-01-11T16:45:00Z",
+      "status": "completed",
+      "balanceAfter": 1500000
+    },
+    {
+      "transactionId": "TXN006",
+      "memberId": "ACC006",
+      "type": "withdrawal",
+      "amount": 50000,
+      "currency": "UGX",
+      "description": "Medical expenses",
+      "date": "2024-01-10T14:10:00Z",
+      "status": "completed",
+      "balanceAfter": 870000
+    },
+    {
+      "transactionId": "TXN007",
+      "memberId": "ACC007",
+      "type": "deposit",
+      "amount": 100000,
+      "currency": "UGX",
+      "description": "Savings contribution",
+      "date": "2024-01-09T08:30:00Z",
+      "status": "completed",
+      "balanceAfter": 1320000
+    },
+    {
+      "transactionId": "TXN008",
+      "memberId": "ACC008",
+      "type": "withdrawal",
+      "amount": 25000,
+      "currency": "UGX",
+      "description": "Utility bills",
+      "date": "2024-01-08T18:00:00Z",
+      "status": "completed",
+      "balanceAfter": 970000
+    },
+    {
+      "transactionId": "TXN009",
+      "memberId": "ACC009",
+      "type": "deposit",
+      "amount": 200000,
+      "currency": "UGX",
+      "description": "Bonus payment",
+      "date": "2024-01-07T12:15:00Z",
+      "status": "completed",
+      "balanceAfter": 1450000
+    },
+    {
+      "transactionId": "TXN010",
+      "memberId": "ACC010",
+      "type": "withdrawal",
+      "amount": 60000,
+      "currency": "UGX",
+      "description": "House rent",
+      "date": "2024-01-06T09:50:00Z",
+      "status": "completed",
+      "balanceAfter": 890000
+    },
+    {
+      "transactionId": "TXN011",
+      "memberId": "ACC011",
+      "type": "deposit",
+      "amount": 120000,
+      "currency": "UGX",
+      "description": "Consultancy fee",
+      "date": "2024-01-05T17:40:00Z",
+      "status": "completed",
+      "balanceAfter": 1100000
+    },
+    {
+      "transactionId": "TXN012",
+      "memberId": "ACC012",
+      "type": "withdrawal",
+      "amount": 40000,
+      "currency": "UGX",
+      "description": "Transport",
+      "date": "2024-01-04T07:25:00Z",
+      "status": "completed",
+      "balanceAfter": 960000
+    }
+  ]
+}

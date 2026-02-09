@@ -1,14 +1,14 @@
-// Exchange Rate API Functions
+// Exchange Rate API Functions 
 export async function getExchangeRates(baseCurrency = 'USD') {
   try {
     const response = await fetch(
       `${import.meta.env.VITE_EXCHANGE_API_URL}/${import.meta.env.VITE_EXCHANGE_API_KEY}/latest/${baseCurrency}`
     );
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
+
     const data = await response.json();
     return data;
   } catch (error) {
@@ -17,40 +17,21 @@ export async function getExchangeRates(baseCurrency = 'USD') {
   }
 }
 
-// Get specific currency conversion
+// Get specific currency conversion using same API
 export async function convertCurrency(from = 'USD', to = 'UGX', amount = 1) {
   try {
     const response = await fetch(
       `${import.meta.env.VITE_EXCHANGE_API_URL}/${import.meta.env.VITE_EXCHANGE_API_KEY}/pair/${from}/${to}/${amount}`
     );
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
+
     const data = await response.json();
     return data;
   } catch (error) {
     console.error('Error converting currency:', error);
-    throw error;
-  }
-}
-
-// Backup API using Frankfurter
-export async function getBackupExchangeRates(baseCurrency = 'USD', targetCurrency = 'UGX') {
-  try {
-    const response = await fetch(
-      `${import.meta.env.VITE_FRANKFURTER_API_URL}/latest?from=${baseCurrency}&to=${targetCurrency}`
-    );
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error fetching backup exchange rates:', error);
     throw error;
   }
 }
@@ -61,11 +42,11 @@ export async function getSupportedCurrencies() {
     const response = await fetch(
       `${import.meta.env.VITE_EXCHANGE_API_URL}/${import.meta.env.VITE_EXCHANGE_API_KEY}/codes`
     );
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
+
     const data = await response.json();
     return data;
   } catch (error) {

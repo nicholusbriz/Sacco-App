@@ -1,0 +1,124 @@
+{
+  "notifications": [
+    {
+      "notificationId": "NOTIF001",
+      "memberId": "ACC002",
+      "type": "loan_approved",
+      "title": "Loan Application Approved",
+      "message": "Your personal loan of UGX 500,000 has been approved",
+      "date": "2024-01-12T09:00:00Z",
+      "read": false,
+      "priority": "high"
+    },
+    {
+      "notificationId": "NOTIF002",
+      "memberId": "ACC002",
+      "type": "interest_rate",
+      "title": "New Interest Rate",
+      "message": "Savings interest rate updated to 8.5% per annum",
+      "date": "2024-01-11T14:30:00Z",
+      "read": false,
+      "priority": "medium"
+    },
+    {
+      "notificationId": "NOTIF003",
+      "memberId": "ACC003",
+      "type": "deposit",
+      "title": "Deposit Successful",
+      "message": "UGX 150,000 has been deposited to your account",
+      "date": "2024-01-13T09:25:00Z",
+      "read": true,
+      "priority": "low"
+    },
+    {
+      "notificationId": "NOTIF004",
+      "memberId": "ACC004",
+      "type": "withdrawal",
+      "title": "Withdrawal Alert",
+      "message": "UGX 75,000 withdrawn from your account",
+      "date": "2024-01-12T11:05:00Z",
+      "read": false,
+      "priority": "medium"
+    },
+    {
+      "notificationId": "NOTIF005",
+      "memberId": "ACC005",
+      "type": "loan_due",
+      "title": "Loan Payment Reminder",
+      "message": "Your loan payment of UGX 300,000 is due soon",
+      "date": "2024-01-20T08:00:00Z",
+      "read": false,
+      "priority": "high"
+    },
+    {
+      "notificationId": "NOTIF006",
+      "memberId": "ACC006",
+      "type": "system_update",
+      "title": "System Maintenance",
+      "message": "Scheduled maintenance on Jan 25, 2024",
+      "date": "2024-01-18T10:00:00Z",
+      "read": false,
+      "priority": "low"
+    },
+    {
+      "notificationId": "NOTIF007",
+      "memberId": "ACC007",
+      "type": "bonus",
+      "title": "Bonus Credited",
+      "message": "UGX 100,000 bonus credited to your account",
+      "date": "2024-01-09T08:35:00Z",
+      "read": true,
+      "priority": "medium"
+    },
+    {
+      "notificationId": "NOTIF008",
+      "memberId": "ACC008",
+      "type": "utility",
+      "title": "Bill Payment Successful",
+      "message": "UGX 25,000 paid for utilities",
+      "date": "2024-01-08T18:05:00Z",
+      "read": true,
+      "priority": "low"
+    },
+    {
+      "notificationId": "NOTIF009",
+      "memberId": "ACC009",
+      "type": "loan_approved",
+      "title": "Business Loan Approved",
+      "message": "Your business loan of UGX 2,500,000 has been approved",
+      "date": "2024-01-05T12:10:00Z",
+      "read": false,
+      "priority": "high"
+    },
+    {
+      "notificationId": "NOTIF010",
+      "memberId": "ACC010",
+      "type": "withdrawal",
+      "title": "Withdrawal Alert",
+      "message": "UGX 60,000 withdrawn for rent",
+      "date": "2024-01-06T09:55:00Z",
+      "read": true,
+      "priority": "medium"
+    },
+    {
+      "notificationId": "NOTIF011",
+      "memberId": "ACC011",
+      "type": "deposit",
+      "title": "Deposit Successful",
+      "message": "UGX 120,000 consultancy fee deposited",
+      "date": "2024-01-05T17:45:00Z",
+      "read": false,
+      "priority": "low"
+    },
+    {
+      "notificationId": "NOTIF012",
+      "memberId": "ACC012",
+      "type": "withdrawal",
+      "title": "Transport Expense",
+      "message": "UGX 40,000 withdrawn for transport",
+      "date": "2024-01-04T07:30:00Z",
+      "read": true,
+      "priority": "low"
+    }
+  ]
+}

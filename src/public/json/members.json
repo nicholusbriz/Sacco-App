@@ -1,0 +1,112 @@
+{
+  "members": [
+    {
+      "memberId": "ACC001",
+      "name": "John Doe",
+      "email": "john.doe@sacco.com",
+      "password": "password123",
+      "balance": 2450000,
+      "currency": "UGX",
+      "createdAt": "2024-01-01"
+    },
+    {
+      "memberId": "ACC002",
+      "name": "Jane Smith",
+      "email": "jane.smith@sacco.com",
+      "password": "mypassword",
+      "balance": 1200000,
+      "currency": "UGX",
+      "createdAt": "2024-01-10"
+    },
+    {
+      "memberId": "ACC003",
+      "name": "Michael Okello",
+      "email": "michael.okello@sacco.com",
+      "password": "pass123",
+      "balance": 800000,
+      "currency": "UGX",
+      "createdAt": "2024-02-01"
+    },
+    {
+      "memberId": "ACC004",
+      "name": "Sarah Namatovu",
+      "email": "sarah.namatovu@sacco.com",
+      "password": "sarahpass",
+      "balance": 1500000,
+      "currency": "UGX",
+      "createdAt": "2024-03-01"
+    },
+    {
+      "memberId": "ACC005",
+      "name": "David Kato",
+      "email": "david.kato@sacco.com",
+      "password": "davidpw",
+      "balance": 5000000,
+      "currency": "UGX",
+      "createdAt": "2024-03-20"
+    },
+    {
+      "memberId": "ACC006",
+      "name": "Grace Nakibuuka",
+      "email": "grace.nakibuuka@sacco.com",
+      "password": "gracepw",
+      "balance": 950000,
+      "currency": "UGX",
+      "createdAt": "2024-04-01"
+    },
+    {
+      "memberId": "ACC007",
+      "name": "Peter Mugisha",
+      "email": "peter.mugisha@sacco.com",
+      "password": "peterpw",
+      "balance": 300000,
+      "currency": "UGX",
+      "createdAt": "2024-04-15"
+    },
+    {
+      "memberId": "ACC008",
+      "name": "Linda Kyomugisha",
+      "email": "linda.kyomugisha@sacco.com",
+      "password": "lindapw",
+      "balance": 2000000,
+      "currency": "UGX",
+      "createdAt": "2024-05-01"
+    },
+    {
+      "memberId": "ACC009",
+      "name": "Robert Ssemanda",
+      "email": "robert.ssemanda@sacco.com",
+      "password": "robertpw",
+      "balance": 750000,
+      "currency": "UGX",
+      "createdAt": "2024-05-10"
+    },
+    {
+      "memberId": "ACC010",
+      "name": "Alice Namirembe",
+      "email": "alice.namirembe@sacco.com",
+      "password": "alicepw",
+      "balance": 1800000,
+      "currency": "UGX",
+      "createdAt": "2024-06-01"
+    },
+    {
+      "memberId": "ACC011",
+      "name": "Samuel Tumusiime",
+      "email": "samuel.tumusiime@sacco.com",
+      "password": "samuelpw",
+      "balance": 2200000,
+      "currency": "UGX",
+      "createdAt": "2024-06-15"
+    },
+    {
+      "memberId": "ACC012",
+      "name": "Mary Atwine",
+      "email": "mary.atwine@sacco.com",
+      "password": "marypw",
+      "balance": 600000,
+      "currency": "UGX",
+      "createdAt": "2024-07-01"
+    }
+  ]
+}
